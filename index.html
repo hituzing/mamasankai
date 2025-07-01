@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ママさん会 - 働きやすい環境を目指して</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'pink': {
+                            50: '#fdf2f8',
+                            100: '#fce7f3',
+                            200: '#fbcfe8',
+                            300: '#f9a8d4',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                            900: '#831843'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-pink-50 to-pink-100">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-pink-500 rounded-full flex items-center justify-center mr-3">
+                        <span class="text-white font-bold text-lg">M</span>
+                    </div>
+                    <h1 class="text-2xl font-bold text-gray-800">ママさん会</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link border-b-2 border-pink-500 text-pink-600 hover:text-pink-800 px-3 py-2 text-sm font-medium" data-target="home">
+                        ホーム
+                    </a>
+                    <a href="#" class="nav-link border-b-2 border-transparent text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="members">
+                        メンバー紹介
+                    </a>
+                    <a href="#" class="nav-link border-b-2 border-transparent text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium" data-target="activities">
+                        活動報告
+                    </a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- モバイルメニュー -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#" class="nav-link block px-3 py-2 text-base font-medium text-pink-600 border-l-4 border-pink-500" data-target="home">
+                    ホーム
+                </a>
+                <a href="#" class="nav-link block px-3 py-2 text-base font-medium text-gray-500 hover:text-gray-700" data-target="members">
+                    メンバー紹介
+                </a>
+                <a href="#" class="nav-link block px-3 py-2 text-base font-medium text-gray-500 hover:text-gray-700" data-target="activities">
+                    活動報告
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- ホームセクション -->
+        <section id="home" class="content-section fade-in">
+            <!-- ヒーローセクション -->
+            <div class="hero-section rounded-2xl text-white p-8 md:p-12 mb-12 slide-in">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        働きやすい環境を目指して
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        ママさんが活躍できる職場づくりのために、課題を共有し、解決策を見つけていきます
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button onclick="document.querySelector('[data-target=&quot;members&quot;]').click()" 
+                                class="btn-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
+                            メンバーを見る
+                        </button>
+                        <button onclick="document.querySelector('[data-target=&quot;activities&quot;]').click()" 
+                                class="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                            活動報告を見る
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 会の目的 -->
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover bounce-in">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">会の目的</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        ママさんが「働きやすい環境」で活躍できるよう、課題を共有し、今後の方向性を話し合います。
+                        仕事と育児の両立に関する悩みや解決策を共有し、より良い職場環境の実現を目指します。
+                    </p>
+                </div>
+                <div class="bg-white rounded-xl p-8 shadow-lg card-hover bounce-in">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">活動内容</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        定期的な会議を通じて、理想の働き方のイメージを共有し、具体的な改善策を検討します。
+                        メンバー同士の経験や知識を活かし、実践的な解決策を見つけていきます。
+                    </p>
+                </div>
+            </div>
+
+            <!-- 最新の活動 -->
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">最新の活動</h3>
+                <div class="border-l-4 border-pink-500 pl-6">
+                    <h4 class="text-lg font-semibold text-gray-800 mb-2">第一回ママさん会キックオフ</h4>
+                    <p class="text-pink-600 font-medium mb-3">2025年6月11日</p>
+                    <p class="text-gray-600 leading-relaxed">
+                        ママさんが「働きやすい環境」で活躍できるよう、課題を共有し、今後の方向性を話し合いました。
+                        会の意義やゴールの共有、自己紹介、理想の働き方のイメージについて議論しました。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- メンバー紹介セクション -->
+        <section id="members" class="content-section hidden">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">メンバー紹介</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    ママさん会のメンバーをご紹介します。それぞれ異なる家族構成や経験を持つメンバーが集まっています。
+                </p>
+            </div>
+            
+<div id="members-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="bg-white rounded-xl p-6 shadow-md text-center">
+    <img src="images/河合主任.png" alt="河合 未希" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-pink-100">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">河合 未希</h3>
+    <p class="text-pink-600">広報担当</p>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-md text-center">
+    <img src="images/川村主任2.png" alt="川村 奈緒子" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-pink-100">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">川村 奈緒子</h3>
+    <p class="text-pink-600">代表</p>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-md text-center">
+    <img src="images/林.png" alt="林 桂子" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-pink-100">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">林 桂子</h3>
+    <p class="text-pink-600">企画</p>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-md text-center">
+    <img src="images/ファムさん.png" alt="ファムさん" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-pink-100">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">ファムさん</h3>
+    <p class="text-pink-600">総務</p>
+  </div>
+  <div class="bg-white rounded-xl p-6 shadow-md text-center">
+    <img src="images/阿川さん.png" alt="阿川さん" class="w-24 h-24 mx-auto rounded-full mb-4 object-cover border-4 border-pink-100">
+    <h3 class="text-xl font-bold text-gray-800 mb-1">阿川さん</h3>
+    <p class="text-pink-600">イベント</p>
+  </div>
+</div>
+
+        </section>
+
+        <!-- 活動報告セクション -->
+        <section id="activities" class="content-section hidden">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">活動報告</h2>
+                    <p class="text-lg text-gray-600">
+                        ママさん会の活動内容や議論の結果をお知らせします。
+                    </p>
+                </div>
+                <button onclick="showAddActivityForm()" 
+                        class="btn-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
+                    新しい報告を追加
+                </button>
+            </div>
+            <div id="activities-container" class="space-y-6">
+                <!-- 活動報告はJavaScriptで動的に生成 -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 活動追加モーダル -->
+    <div id="add-activity-modal" class="fixed inset-0 bg-black bg-opacity-50 modal-backdrop hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">新しい活動報告を追加</h3>
+                    <button onclick="hideAddActivityForm()" class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <form id="add-activity-form" onsubmit="submitActivity(event)">
+                    <div class="space-y-4">
+                        <div>
+                            <label for="title" class="block text-sm font-medium text-gray-700 mb-2">タイトル</label>
+                            <input type="text" id="title" name="title" required 
+                                   class="form-input w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div>
+                            <label for="description" class="block text-sm font-medium text-gray-700 mb-2">内容</label>
+                            <textarea id="description" name="description" rows="4" required 
+                                      class="form-input w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+                        </div>
+                        <div>
+                            <label for="participants" class="block text-sm font-medium text-gray-700 mb-2">参加者（「、」で区切って入力）</label>
+                            <input type="text" id="participants" name="participants" required 
+                                   placeholder="河合 未希、川村 奈緒子、林 桂子"
+                                   class="form-input w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                        <div>
+                            <label for="nextMeeting" class="block text-sm font-medium text-gray-700 mb-2">次回予定（任意）</label>
+                            <input type="text" id="nextMeeting" name="nextMeeting" 
+                                   class="form-input w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500">
+                        </div>
+                    </div>
+                    <div class="flex justify-end space-x-4 mt-6">
+                        <button type="button" onclick="hideAddActivityForm()" 
+                                class="px-6 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
+                            キャンセル
+                        </button>
+                        <button type="submit" 
+                                class="btn-primary text-white px-6 py-2 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
+                            追加
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="bg-white border-t mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center mr-2">
+                        <span class="text-white font-bold">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">ママさん会</span>
+                </div>
+                <p class="text-gray-600">働きやすい環境を目指して</p>
+                <p class="text-sm text-gray-500 mt-2">© 2025 ママさん会. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/script.js"></script>
+    <script>
+        // モバイルメニューの制御
+        document.getElementById('mobile-menu-button').addEventListener('click', () => {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
